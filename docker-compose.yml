@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  postgres:
+    build: ./services/postgres
+    environment:
+      - "POSTGRES_USER=$PG_USER"
+      - "POSTGRES_PASSWORD=$PG_PASSWD"
+      - "POSTGRES_DB=$PG_DB"
+    volumes:
+      - "/home/faisala/checkouts/word-lapse-models:/data"
